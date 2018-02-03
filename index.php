@@ -83,11 +83,7 @@
                         $(selecteur).empty();
                         // Maj des coordonnées affichées
                         var coord = $('#pos').text();
-                        if (coord.charAt(4) !== '') {
-                            $('#pos').text(coord.charAt(0) + ', ' + ( + (coord.charAt(3) + coord.charAt(4)) + 1 ) + ' (N)');
-                        } else {
-                            $('#pos').text(coord.charAt(0) + ', ' + ( + coord.charAt(3) + 1 ) + ' (N)');
-                        }
+                        $('#pos').text(coord.charAt(0) + ', ' + ( + coord.charAt(3) + 1 ) + ' (N)');
                         // Définission des attributs de la nouvelle case selectionnée
                         $(selecteur).removeClass('selected');
                         $(newSelecteur).addClass('selected');
@@ -105,11 +101,7 @@
                         $(selecteur).empty();
                         // Maj des coordonnées affichées
                         var coord = $('#pos').text();
-                        if (coord.charAt(4) !== '') {
-                            $('#pos').text(coord.charAt(0) + ', ' + ( (coord.charAt(3) + coord.charAt(4)) - 1 ) + ' (S)');
-                        } else {
-                            $('#pos').text(coord.charAt(0) + ', ' + ( coord.charAt(3) - 1 ) + ' (S)');
-                        }
+                        $('#pos').text(coord.charAt(0) + ', ' + ( coord.charAt(3) - 1 ) + ' (S)');
                         // Définission des attributs de la nouvelle case selectionnée
                         $(selecteur).removeClass('selected');
                         $(newSelecteur).addClass('selected');
@@ -127,11 +119,7 @@
                         $(selecteur).empty();
                         // Maj des coordonnées affichées
                         var coord = $('#pos').text();
-                        if (coord.charAt(1) !== ',') {
-                            $('#pos').text(( + (coord.charAt(0) + coord.charAt(1)) + 1 ) + ', ' + coord.charAt(3) + ' (E)');
-                        } else {
-                            $('#pos').text(( + coord.charAt(0) + 1 ) + ', ' + coord.charAt(3) + ' (E)');
-                        }
+                        $('#pos').text(( + coord.charAt(0) + 1 ) + ', ' + coord.charAt(3) + ' (E)');
                         // Définission des attributs de la nouvelle case selectionnée
                         $(selecteur).removeClass('selected');
                         $(newSelecteur).addClass('selected');
@@ -149,11 +137,7 @@
                         $(selecteur).empty();
                         // Maj des coordonnées affichées
                         var coord = $('#pos').text();
-                        if (coord.charAt(1) !== ',') {
-                            $('#pos').text(( + (coord.charAt(0) + coord.charAt(1)) - 1 ) + ', ' + coord.charAt(3) + ' (W)');
-                        } else {
-                            $('#pos').text(( + coord.charAt(0) - 1 ) + ', ' + coord.charAt(3) + ' (W)');
-                        }
+                        $('#pos').text(( + coord.charAt(0) - 1 ) + ', ' + coord.charAt(3) + ' (W)');
                         // Définission des attributs de la nouvelle case selectionnée
                         $(selecteur).removeClass('selected');
                         $(newSelecteur).addClass('selected');
@@ -173,11 +157,7 @@
                         $(selecteur).html('<img id="aspirateur" src="img/E.png" alt="" />')
                         // Maj des coordonnées affichées
                         var coord = $('#pos').text();
-                        if (coord.charAt(4) !== '') {
-                            $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + coord.charAt(4) + ' (E)');
-                        } else {
-                            $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (E)');
-                        }
+                        $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (E)');
                     }
                     // Si sud devient ouest
                     if (orientation.charAt(4) === "S") {
@@ -188,11 +168,7 @@
                         $(selecteur).html('<img id="aspirateur" src="img/W.png" alt="" />')
                         // Maj des coordonnées affichées
                         var coord = $('#pos').text();
-                        if (coord.charAt(4) !== '') {
-                            $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + coord.charAt(4) + ' (W)');
-                        } else {
-                            $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (W)');
-                        }
+                        $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (W)');
                     }
                     // Si est devient sud
                     if (orientation.charAt(4) === "E") {
@@ -203,11 +179,7 @@
                         $(selecteur).html('<img id="aspirateur" src="img/S.png" alt="" />')
                         // Maj des coordonnées affichées
                         var coord = $('#pos').text();
-                        if (coord.charAt(1) % 2 !== '') {
-                            $('#pos').text(coord.charAt(0) + coord.charAt(1) + ', ' + coord.charAt(4)+ ' (S)');
-                        } else {
-                            $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (S)');
-                        }
+                        $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (S)');
                     }
                     // Si ouest devient nord
                     if (orientation.charAt(4) === "W") {
@@ -218,11 +190,7 @@
                         $(selecteur).html('<img id="aspirateur" src="img/N.png" alt="" />')
                         // Maj des coordonnées affichées
                         var coord = $('#pos').text();
-                        if (coord.charAt(1) % 2 !== '') {
-                            $('#pos').text(coord.charAt(0) + coord.charAt(1) + ', ' + coord.charAt(4) + ' (N)');
-                        } else {
-                            $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (N)');
-                        }
+                        $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (N)');
                     }
                 }
                 // Lorsque l'instruction est un pivot vers la gauche
@@ -239,11 +207,7 @@
                         $(selecteur).html('<img id="aspirateur" src="img/W.png" alt="" />')
                         // Maj des coordonnées affichées
                         var coord = $('#pos').text();
-                        if (coord.charAt(4) === '0') {
-                            $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + coord.charAt(4) + ' (W)');
-                        } else {
-                            $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (W)');
-                        }
+                        $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (W)');
                     }
                     // Si sud devient est
                     if (orientation.charAt(4) === "S") {
@@ -254,11 +218,7 @@
                         $(selecteur).html('<img id="aspirateur" src="img/E.png" alt="" />')
                         // Maj des coordonnées affichées
                         var coord = $('#pos').text();
-                        if (coord.charAt(4) === '0') {
-                            $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + coord.charAt(4) + ' (E)');
-                        } else {
-                            $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (E)');
-                        }
+                        $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (E)');
                     }
                     // Si est devient nord
                     if (orientation.charAt(4) === "E") {
@@ -269,11 +229,7 @@
                         $(selecteur).html('<img id="aspirateur" src="img/N.png" alt="" />')
                         // Maj des coordonnées affichées
                         var coord = $('#pos').text();
-                        if (coord.charAt(1) % 2 !== '') {
-                            $('#pos').text(coord.charAt(0) + coord.charAt(1) + ', ' + coord.charAt(4) + ' (N)');
-                        } else {
-                            $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (N)');
-                        }
+                        $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (N)');
                     }
                     // Si ouest devient sud
                     if (orientation.charAt(4) === "W") {
@@ -284,11 +240,7 @@
                         $(selecteur).html('<img id="aspirateur" src="img/S.png" alt="" />')
                         // Maj des coordonnées affichées
                         var coord = $('#pos').text();
-                        if (coord.charAt(1) % 2 !== '') {
-                            $('#pos').text(coord.charAt(0) + coord.charAt(1) + ', ' + coord.charAt(4) + ' (S)');
-                        } else {
-                            $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (S)');
-                        }
+                        $('#pos').text(coord.charAt(0) + ', ' + coord.charAt(3) + ' (S)');
                     }
                 }
             }
