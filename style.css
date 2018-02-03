@@ -1,0 +1,11 @@
+.case {
+    border-width: 1px;
+    border-style: solid;
+    height: 50px;
+    text-align: center;
+}
+
+#aspirateur {
+    width: 49px;
+    height: 49px;
+}
